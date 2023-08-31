@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="FoodieFy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="56"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="56"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFo-gX-Rhk" customClass="CardView" customModule="FoodieFy" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="56"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DCm-a1-NAD">
+                                <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="cqz-A0-yXj"/>
+                                    <constraint firstAttribute="height" constant="40" id="eoE-NY-UzT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xyz-Dt-wFF">
+                                <rect key="frame" x="64" y="20.333333333333332" width="78" height="15.666666666666668"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DCm-a1-NAD" firstAttribute="top" secondItem="jFo-gX-Rhk" secondAttribute="top" constant="8" id="9Gj-7j-3VO"/>
+                            <constraint firstAttribute="trailing" secondItem="Xyz-Dt-wFF" secondAttribute="trailing" constant="8" id="JrC-73-a2a"/>
+                            <constraint firstItem="Xyz-Dt-wFF" firstAttribute="leading" secondItem="DCm-a1-NAD" secondAttribute="trailing" constant="16" id="OBo-W3-Xba"/>
+                            <constraint firstAttribute="bottom" secondItem="DCm-a1-NAD" secondAttribute="bottom" constant="8" id="TMw-26-j7m"/>
+                            <constraint firstAttribute="width" constant="150" id="TY1-58-V5k"/>
+                            <constraint firstAttribute="height" constant="56" id="azA-kG-U7e"/>
+                            <constraint firstItem="Xyz-Dt-wFF" firstAttribute="centerY" secondItem="DCm-a1-NAD" secondAttribute="centerY" id="bDl-6c-zLw"/>
+                            <constraint firstItem="DCm-a1-NAD" firstAttribute="leading" secondItem="jFo-gX-Rhk" secondAttribute="leading" constant="8" id="tLc-GT-CGl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="jFo-gX-Rhk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ehg-G6-4mA"/>
+                <constraint firstAttribute="trailing" secondItem="jFo-gX-Rhk" secondAttribute="trailing" id="UgH-zA-h5z"/>
+                <constraint firstItem="jFo-gX-Rhk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tOP-98-YIT"/>
+                <constraint firstAttribute="bottom" secondItem="jFo-gX-Rhk" secondAttribute="bottom" id="xkr-Z7-8NN"/>
+            </constraints>
+            <size key="customSize" width="150" height="56"/>
+            <connections>
+                <outlet property="categoryImageView" destination="DCm-a1-NAD" id="71x-fB-8E0"/>
+                <outlet property="categoryTitleLbl" destination="Xyz-Dt-wFF" id="tUZ-aI-zpD"/>
+            </connections>
+            <point key="canvasLocation" x="213.74045801526717" y="18.30985915492958"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
