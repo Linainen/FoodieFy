@@ -32,7 +32,8 @@ class OrdersInCartViewController: UIViewController {
     }
     
     private func setupTotalSum(){
-        totalAmmountLbl.text = ordersModel.calculateSum(orders: ordersFS)
+        let sum = ordersModel.calculateSum(orders: ordersFS)
+        totalAmmountLbl.text = "\(sum) BYN"
     }
     
     private func fetchOrders() {
